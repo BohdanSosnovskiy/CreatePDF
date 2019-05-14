@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        body{
+            background-color:dodgerblue;
+        }
+        p{
+            color:midnightblue;
+            font-size:14pt;
+        }
+        #Text1 {
+            width: 70px;
+        }
+        #Text2 {
+            width: 70px;
+        }
+        #TextArea1 {
+            height: 97px;
+            width: 345px;
+        }
+        #id_task {
+            width: 227px;
+        }
+        .borderElement{
+            background-color: aliceblue;
+            border: 2px solid #183f7f;
+            border-radius: 50px;
+        }
+
+        .div_window{
+            background-color: Highlight;
+            border: 2px solid #183f7f;
+            border-radius: 25px;
+            width: 25%;
+            align-content:center;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="div_window">
+            <p style="text-align: center">
+                Welcome to page tasks</p>
+            <p>
+                Input values &#39;x&#39; and &#39;y&#39;</p>
+            <form method="post" name="newTask">
+                <input class="borderElement" id="Text1" name="Text1" type="text" />
+                <input class="borderElement" id="Text2" name="Text2" type="text" />
+                <input class="borderElement" id="Add_task" type="submit" value="Add task" />
+                <p>task id </p>
+                <p style="color:midnightblue">{{id_task}}</p>
+            </form> 
+            <form action="/result">
+                <p><input class="borderElement" id="result_id" name="result_id" type="text"/> 
+       
+                    <input class="borderElement" id="Submit1" type="submit" value="View result" />
+                </p>
+            </form>
+         </div> 
+     </center>
+</body>
+</html>
