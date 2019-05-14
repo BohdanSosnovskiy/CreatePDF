@@ -19,8 +19,14 @@ def new_page():
 
 @APP.route('/create_pdf')
 def create_pdf(): 
+
+    #parser html page
     html = Parse()
+
+    #convert file svg to pdf
     cairosvg.svg2pdf(url='E:\graduatecap.svg', write_to='E:\image.pdf')
+
+    #Write info in PDF file
     HTML(string=html).write_pdf('E:\weasyprint-website.pdf')
     return html
 
